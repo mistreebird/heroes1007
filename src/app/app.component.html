@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
+<app-ngb-alert [alert]="{'type':'info','message':'test'}"></app-ngb-alert>
+<app-ngb-datepicker #myDate></app-ngb-datepicker>
+<h1 *ngIf="myDate.date">
+  選擇日期：{{myDate.date | json }}
 </h1>
+<button (click)="clicked(myDate)">GetDate</button>
