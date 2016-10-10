@@ -1,0 +1,10 @@
+<app-ngb-alert [alert]="{'type':'info','message':'test'}"></app-ngb-alert>
+<app-ngb-datepicker #myDate  (onChangeDate)="date = $event"></app-ngb-datepicker>
+<h1 *ngIf="myDate.date">
+  選擇日期：{{myDate.date | json }}
+</h1>
+
+<h1 *ngIf="date">
+  選擇日期：{{date | json }}
+</h1>
+<button (click)="clicked(myDate)">GetDate</button>
