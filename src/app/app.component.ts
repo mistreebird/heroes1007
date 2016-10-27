@@ -11,10 +11,10 @@ export class AppComponent implements OnInit {
   testDate2: ngbDate;
   title = 'app works!';
 
-   ngOnInit() {
-     var date : Date = new Date(2016,10,1) ;
-     this.testDate2      = new ngbDate(date,true) ;
-     this.testDate    = new ngbDate(2016,10,15,12,30) ;
+  ngOnInit() {
+    var dateTemp: Date = new Date(2016, 8, 1,14,30,0,0);
+    this.testDate2 = new ngbDate(dateTemp);
+    this.testDate = new ngbDate(2016, 10, 15);
   }
 
   clicked() {
