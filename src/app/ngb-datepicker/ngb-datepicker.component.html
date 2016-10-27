@@ -7,12 +7,95 @@
 				<img src="/img/calendar-icon.svg" style="width: 1.2rem; cursor: pointer;" />
 			</div>
 			<div *ngIf="myngbDate.bHaveTime">
-        <p style="display:block; float:left; margin:0;line-height:40px;">&nbsp;</p>
-        <select #ngbHour class="form-control" (change)="changeHour(ngbHour.value)">
-       <option *ngFor="let Hours of HoursArray" [value]="Hours" [selected]="myngbDate.hours == Hours">{{leftPad0(Hours,2)}}</option>
-      </select><p style="display:block; float:left; margin:0;line-height:40px;font-size:20px;">&nbsp;:&nbsp;</p>
+				<p style="display:block; float:left; margin:0;line-height:40px;">&nbsp;</p>
+				<select #ngbHour class="form-control" (change)="changeHour(ngbHour.value)">
+       <option [value]="0" [selected]="myngbDate.hours == 0">00</option>
+       <option [value]="1" [selected]="myngbDate.hours == 1">01</option>
+       <option [value]="2" [selected]="myngbDate.hours == 2">02</option>
+       <option [value]="3" [selected]="myngbDate.hours == 3">03</option>
+       <option [value]="4" [selected]="myngbDate.hours == 4">04</option>
+       <option [value]="5" [selected]="myngbDate.hours == 5">05</option>
+       <option [value]="6" [selected]="myngbDate.hours == 6">06</option>
+       <option [value]="7" [selected]="myngbDate.hours == 7">07</option>
+       <option [value]="8" [selected]="myngbDate.hours == 8">08</option>
+       <option [value]="9" [selected]="myngbDate.hours == 9">09</option>
+       <option [value]="10" [selected]="myngbDate.hours == 10">10</option>
+       <option [value]="11" [selected]="myngbDate.hours == 11">11</option>
+       <option [value]="12" [selected]="myngbDate.hours == 12">12</option>
+       <option [value]="13" [selected]="myngbDate.hours == 13">13</option>
+       <option [value]="14" [selected]="myngbDate.hours == 14">14</option>
+       <option [value]="15" [selected]="myngbDate.hours == 15">15</option>
+       <option [value]="16" [selected]="myngbDate.hours == 16">16</option>
+       <option [value]="17" [selected]="myngbDate.hours == 17">17</option>
+       <option [value]="18" [selected]="myngbDate.hours == 18">18</option>
+       <option [value]="19" [selected]="myngbDate.hours == 19">19</option>
+       <option [value]="20" [selected]="myngbDate.hours == 20">20</option>
+       <option [value]="21" [selected]="myngbDate.hours == 21">21</option>
+       <option [value]="22" [selected]="myngbDate.hours == 22">22</option>
+       <option [value]="23" [selected]="myngbDate.hours == 23">23</option>
+      </select>
+				<p style="display:block; float:left; margin:0;line-height:40px;font-size:20px;">&nbsp;:&nbsp;</p>
 				<select #ngbMinute class="form-control" (change)="changeMinute(ngbMinute.value)">
-       <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+       <option [value]="0" [selected]="myngbDate.minutes == 0">00</option>
+       <option [value]="1" [selected]="myngbDate.minutes == 1">01</option>
+       <option [value]="2" [selected]="myngbDate.minutes == 2">02</option>
+       <option [value]="3" [selected]="myngbDate.minutes == 3">03</option>
+       <option [value]="4" [selected]="myngbDate.minutes == 4">04</option>
+       <option [value]="5" [selected]="myngbDate.minutes == 5">05</option>
+       <option [value]="6" [selected]="myngbDate.minutes == 6">06</option>
+       <option [value]="7" [selected]="myngbDate.minutes == 7">07</option>
+       <option [value]="8" [selected]="myngbDate.minutes == 8">08</option>
+       <option [value]="9" [selected]="myngbDate.minutes == 9">09</option>
+       <option [value]="10" [selected]="myngbDate.minutes == 10">10</option>
+       <option [value]="11" [selected]="myngbDate.minutes == 11">11</option>
+       <option [value]="12" [selected]="myngbDate.minutes == 12">12</option>
+       <option [value]="13" [selected]="myngbDate.minutes == 13">13</option>
+       <option [value]="14" [selected]="myngbDate.minutes == 14">14</option>
+       <option [value]="15" [selected]="myngbDate.minutes == 15">15</option>
+       <option [value]="16" [selected]="myngbDate.minutes == 16">16</option>
+       <option [value]="17" [selected]="myngbDate.minutes == 17">17</option>
+       <option [value]="18" [selected]="myngbDate.minutes == 18">18</option>
+       <option [value]="19" [selected]="myngbDate.minutes == 19">19</option>
+       <option [value]="20" [selected]="myngbDate.minutes == 20">20</option>
+       <option [value]="21" [selected]="myngbDate.minutes == 21">21</option>
+       <option [value]="22" [selected]="myngbDate.minutes == 22">22</option>
+       <option [value]="23" [selected]="myngbDate.minutes == 23">23</option>
+       <option [value]="24" [selected]="myngbDate.minutes == 24">24</option>
+       <option [value]="25" [selected]="myngbDate.minutes == 25">25</option>
+       <option [value]="26" [selected]="myngbDate.minutes == 26">26</option>
+       <option [value]="27" [selected]="myngbDate.minutes == 27">27</option>
+       <option [value]="28" [selected]="myngbDate.minutes == 28">28</option>
+       <option [value]="29" [selected]="myngbDate.minutes == 29">29</option>
+       <option [value]="30" [selected]="myngbDate.minutes == 30">30</option>
+       <option [value]="31" [selected]="myngbDate.minutes == 31">31</option>
+       <option [value]="32" [selected]="myngbDate.minutes == 32">32</option>
+       <option [value]="33" [selected]="myngbDate.minutes == 33">33</option>
+       <option [value]="34" [selected]="myngbDate.minutes == 34">34</option>
+       <option [value]="35" [selected]="myngbDate.minutes == 35">35</option>
+       <option [value]="36" [selected]="myngbDate.minutes == 36">36</option>
+       <option [value]="37" [selected]="myngbDate.minutes == 37">37</option>
+       <option [value]="38" [selected]="myngbDate.minutes == 38">38</option>
+       <option [value]="39" [selected]="myngbDate.minutes == 39">39</option>
+       <option [value]="40" [selected]="myngbDate.minutes == 40">40</option>
+       <option [value]="41" [selected]="myngbDate.minutes == 41">41</option>
+       <option [value]="42" [selected]="myngbDate.minutes == 42">42</option>
+       <option [value]="43" [selected]="myngbDate.minutes == 43">43</option>
+       <option [value]="44" [selected]="myngbDate.minutes == 44">44</option>
+       <option [value]="45" [selected]="myngbDate.minutes == 45">45</option>
+       <option [value]="46" [selected]="myngbDate.minutes == 46">46</option>
+       <option [value]="47" [selected]="myngbDate.minutes == 47">47</option>
+       <option [value]="48" [selected]="myngbDate.minutes == 48">48</option>
+       <option [value]="49" [selected]="myngbDate.minutes == 49">49</option>
+       <option [value]="50" [selected]="myngbDate.minutes == 50">50</option>
+       <option [value]="51" [selected]="myngbDate.minutes == 51">51</option>
+       <option [value]="52" [selected]="myngbDate.minutes == 52">52</option>
+       <option [value]="53" [selected]="myngbDate.minutes == 53">53</option>
+       <option [value]="54" [selected]="myngbDate.minutes == 54">54</option>
+       <option [value]="55" [selected]="myngbDate.minutes == 55">55</option>
+       <option [value]="56" [selected]="myngbDate.minutes == 56">56</option>
+       <option [value]="57" [selected]="myngbDate.minutes == 57">57</option>
+       <option [value]="58" [selected]="myngbDate.minutes == 58">58</option>
+       <option [value]="59" [selected]="myngbDate.minutes == 59">59</option>
       </select>
 			</div>
 		</div>

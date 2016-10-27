@@ -1,3 +1,5 @@
+import { common } from '../common';
+
 export class ngbDate {
   year: number;
   month: number;
@@ -53,6 +55,7 @@ export class ngbDate {
   }
 
   toDateString(): string {
-    return this.year + '-' + this.month + '-' + this.day + (this.bHaveTime ? ' ' + this.hours + ':' + this.minutes + ':' + this.seconds : '');
+
+    return this.year + '-' + common.leftPad(this.month,2,'0') + '-' + common.leftPad(this.day,2,'0') + (this.bHaveTime ? ' ' + common.leftPad(this.hours,2,'0') + ':' + common.leftPad(this.minutes,2,'0') + ':' + common.leftPad(this.seconds,2,'0') : '');
   }
 }

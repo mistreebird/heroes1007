@@ -1,9 +1,9 @@
 <app-ngb-alert [alert]="{'type':'info','message':'test'}"></app-ngb-alert>
-<app-ngb-datepicker [myngbDate]="testDate" (onChangeDate)="testDate = $event"></app-ngb-datepicker>
+<app-ngb-datepicker [myngbDate]="testDate"></app-ngb-datepicker>
 <h1 *ngIf="testDate">
   選擇日期：{{testDate.toDateString()}}
 </h1>
-<app-ngb-datepicker [myngbDate]="testDate2" (onChangeDate)="testDate2 = $event"></app-ngb-datepicker>
+<app-ngb-datepicker [myngbDate]="testDate2"></app-ngb-datepicker>
 <h1 *ngIf="testDate2">
   選擇日期：{{testDate2.toDateString()}}
 </h1>
